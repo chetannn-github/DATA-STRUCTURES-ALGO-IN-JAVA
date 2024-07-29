@@ -1,4 +1,3 @@
-import java.util.*;
 
 class KadanesAlgo{
     public static int kadanesAlgo(int arr[]){
