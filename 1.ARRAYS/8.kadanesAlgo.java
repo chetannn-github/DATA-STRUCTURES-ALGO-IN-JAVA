@@ -1,14 +1,21 @@
 
 class KadanesAlgo{
     public static int kadanesAlgo(int arr[]){
-
         int cs=0 , ms = Integer.MIN_VALUE;
+        
+        // checking that if all the numbers are negative
         for (int i=0, count=0;i<arr.length;i++){
-            if (arr[i]<0){count++; ms=Math.max(ms,arr[i]);}
-            if (count== arr.length){return ms;}
+            if (arr[i]<0){
+                count++; 
+                ms=Math.max(ms,arr[i]);
+            }
+            if (count == arr.length){
+                return ms;
+            }
         }
-    
-        cs =0; ms=Integer.MIN_VALUE;
+        //kadanes algo 
+        cs = 0; 
+        ms= Integer.MIN_VALUE;
         for(int i=0;i<arr.length;i++){
             cs += arr[i];
             if (cs<0){
@@ -22,6 +29,6 @@ class KadanesAlgo{
 
     public static void main(String args[]){
         int num []= {-2,-3,-1,-2,-3};
-        System.out.print("MAX SUBARRAY SUM = " +kadanesAlgo(num));
+        System.out.print("MAX SUBARRAY SUM = " + kadanesAlgo(num));
     }
 }

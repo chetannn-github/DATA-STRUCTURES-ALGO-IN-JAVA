@@ -1,6 +1,6 @@
-import java.util.*;
-
 class PrefixSum{
+
+
     public static int prefixSum(int arr[]){
         int prefix[] = new int[arr.length];
         prefix[0] = arr[0];
@@ -10,7 +10,8 @@ class PrefixSum{
         }
 
         // max subarray sum calculation
-        int sum =0;int maxSum= Integer.MIN_VALUE;
+        int sum = 0;
+        int maxSum = Integer.MIN_VALUE;
 
         for(int i=0;i<arr.length;i++){
             for (int j=i; j<arr.length;j++){
