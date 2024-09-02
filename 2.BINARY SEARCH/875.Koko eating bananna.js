@@ -21,11 +21,12 @@ var minEatingSpeed = function(piles, h) {
 
 let speedPossible = (speed,piles,h)=>{
     let ans = 0;
+    
     for (let i =0 ; i<piles.length; i++){
         ans = ans + Math.ceil(piles[i]/speed);
         if(ans>h){return false}
         
     }
-    return true;
-    
+    return true; 
+
 }
