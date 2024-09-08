@@ -5,16 +5,14 @@ class LinkedList {
         int data ;
         Node next;
 
-    
         public Node(int data){
             this.data = data;
             this.next = null;
-
         }
         
     }
+    
     private Node  head;
-
     public LinkedList (){
         head = null;
     }
@@ -46,11 +44,9 @@ class LinkedList {
     public int size (){
         int count = 0;
         Node current = head; 
-        while(current != null){
-
+        while(current != null){ 
             count++;
             current = current.next;
-
         }
         return count;
     }   
@@ -67,7 +63,23 @@ class LinkedList {
     }
 
    
-    
+    public void remove(int data){
+        if(head == null){return;}
+
+        if(head.data==data){
+            head = head.next;
+        }
+        
+        Node current = head;
+        while(current.next != null){
+            if(current.next.data== data){
+                current.next = current.next.next;
+
+            }
+            current = current.next;
+        }
+    }
+
 
 
 
